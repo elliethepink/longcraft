@@ -1,7 +1,7 @@
 const esbuild = require("esbuild");
 
 const BANNER = `// ==UserScript==
-// @name BC Games
+// @name BC Long Crafts
 // @namespace https://www.bondageprojects.com/
 // @version 1.0.0
 // @description Long Craft Descriptions for BC
@@ -25,5 +25,5 @@ esbuild.build({
   banner: {
     js: BANNER,
   },
-  outfile: 'out/longcraft.js',
+  outfile: 'out/longcraft.user.js',
 })
