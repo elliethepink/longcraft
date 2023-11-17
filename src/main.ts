@@ -6,14 +6,18 @@ const modApi = bcModSDK.registerMod({
 	version: '1.0.0',
 });
 
+modApi.patchFunction("CraftingModeSet", {
+    [`ElementCreateInput("InputDescription", "text", "", "200");`]: `ElementCreateInput("InputDescription", "text", "", "600");`,
+});
+
 modApi.patchFunction("DialogDrawCrafting", {
-    "substring(0, 100)": "substring(0, 600)",
+    "substring(0, 200)": "substring(0, 600)",
 });
 
 modApi.patchFunction("CraftingConvertSelectedToItem", {
-    "substring(0, 100)": "substring(0, 600)",
+    "substring(0, 200)": "substring(0, 600)",
 });
 
 modApi.patchFunction("CraftingSaveServer", {
-    "substring(0, 100)": "substring(0, 600)",
+    "substring(0, 200)": "substring(0, 600)",
 });
